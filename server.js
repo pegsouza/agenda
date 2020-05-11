@@ -35,7 +35,7 @@ server.put('/agenda/:cod', function(request, response){
     const cod = request.params.cod;
     const {id,compromisso, data, realizado} = request.body;
 
-    for (let i = 0; i < agenda.lenght; i++){
+    for (let i = 0; i < agenda.length; i++){
         if (agenda[i].id == cod ){
             agenda[i].id = id;
             agenda[i].compromisso = compromisso;
@@ -52,7 +52,7 @@ server.put('/agenda/:cod', function(request, response){
 
 server.delete('/agenda/:cod', function(request, response){
     const cod = request.params.cod;
-    for (let i = 0; i < agenda.lenght; i++){
+    for (let i = 0; i < agenda.length; i++){
         if (agenda[i].id == cod ){
             agenda.splice(i, 1);
              break;
